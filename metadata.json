@@ -1,0 +1,6 @@
+{
+  "name": "Solaiman Molla Portfolio",
+  "description": "Personal Portfolio website for Solaiman Molla, CSE Student, ML Enthusiast & Competitive Programmer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

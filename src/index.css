@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.6);
+}
+
+/* Print CSS for Resume */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print\:bg-white,
+  .print\:bg-white * {
+    visibility: visible;
+  }
+  .print\:bg-white {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+/* Custom morphing blob animation */
+@keyframes morph {
+  0% {
+    border-radius: 48% 52% 52% 48% / 55% 48% 52% 45%;
+  }
+  25% {
+    border-radius: 52% 48% 46% 54% / 48% 55% 45% 52%;
+  }
+  50% {
+    border-radius: 46% 54% 52% 48% / 52% 45% 55% 48%;
+  }
+  75% {
+    border-radius: 54% 46% 48% 52% / 45% 52% 48% 55%;
+  }
+  100% {
+    border-radius: 48% 52% 52% 48% / 55% 48% 52% 45%;
+  }
+}
+
+.animate-morph-blob {
+  animation: morph 12s ease-in-out infinite;
+}
+
