@@ -5,6 +5,7 @@
     scroll-behavior: smooth;
   }
 
+
   body {
     background-color: #ffffff;
     color: #0f172a;
@@ -21,7 +22,7 @@
   }
 }
 
-/* Custom scrollbar */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
