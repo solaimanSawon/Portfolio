@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
+
 interface FadeInProps {
   children: React.ReactNode;
   direction?: 'up' | 'down' | 'left' | 'right' | 'none';
